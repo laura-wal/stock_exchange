@@ -8,4 +8,6 @@ class Stock
     @share_price = options[:share_price]
   end
 
+
+
 end  

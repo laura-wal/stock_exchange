@@ -23,4 +23,11 @@ class Brokerage
      return @choosen_client
   end
 
+ def list_clients
+  @clients.each { |client| puts " client = #{client.name}, balance = #{client.balance }" }
+  end 
+
+
+
+
 end

@@ -8,8 +8,18 @@ class Client
     @portfolios = options[:portfolios] || []
   end  
 
-def display_portfolios
-    portfolios.keys.join(', ')
-  end
+
+   def list_portfolio
+  @portfolios.each { |portfolio| puts " Portfolios = #{portfolio.name}" }
+  end 
+
+# this didnt work....connect to portfolio_value def
+  # def list_portfolio
+  # @portfolios.each { |portfolio| puts " Portfolios = #{portfolio.name}, Value = #{total_value} " }
+  # end 
+
+# def display_
+#     animals.keys.join(', ')
+#   end
 
 end  

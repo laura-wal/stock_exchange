@@ -91,8 +91,6 @@ while response != 'q'
 
      choosen_client.portfolios << portfolio
 
-      binding.pry
-      puts 'bug'
 
      #  print (
      #  brokerage_one.clients.each do |clients|
@@ -106,11 +104,35 @@ while response != 'q'
     when '3'
     when '4'
     when '5'
+       brokerage_one.list_clients
     when '6'
-    puts client.display_portfolios
-    puts "Enter any key to continue"
-    gets
+    puts "Choose a clients portfolio to look at: "
+      
+      brokerage_one.display_clients
+      client_name = gets.chomp
+
+      choosen_client = brokerage_one.get_client(client_name)
+
+
+      choosen_client.list_portfolio 
+
+    # puts client.display_portfolios
+    # puts "Enter any key to continue"
+    # gets
     when '7'
+
+      brokerage_one.client.portfolio.list_stocks
+
+      # puts "Choose a portfolio to look at: "
+      
+      # brokerage_one.display_clients
+      # client_name = gets.chomp
+
+      # choosen_client = brokerage_one.get_client(client_name)
+
+
+      # choosen_client.list_portfolio 
+
   end
 
 
